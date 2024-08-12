@@ -1,5 +1,5 @@
 {
-  "homepage": "https://btom7447.github.io/Oasis-Estates",
+  "homepage": "https://btom7447.github.io/Oasis-Estates/",
   "name": "oasis-estates",
   "version": "0.1.0",
   "private": true,
@@ -61,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.1"
   }
 }
