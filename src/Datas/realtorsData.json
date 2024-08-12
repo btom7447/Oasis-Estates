@@ -1,0 +1,148 @@
+[
+    {
+        "id": "1",
+        "name": "David Idowu",
+        "phone": "+234 5677 8910",
+        "email": "david.idowu@example.com",
+        "listed": 5,
+        "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe", 
+        "experience": 8,
+        "overview": ["As a seasoned real estate professional with 8 years of experience, I possess a deep understanding of the Nigerian property market. My expertise spans property valuation, market analysis, and negotiations, ensuring seamless transactions for clients.",
+            "Throughout my career, I have developed a strong network of contacts and a keen eye for market trends. This enables me to offer expert guidance and support to clients, whether they are buying, selling, or renting properties.",
+            "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer tailored guidance and support every step of the way."
+            ],
+        "bio": [
+            "Experienced real estate professional with 8 years of expertise in navigating the complex Nigerian property market. Dedicated to providing personalized services and ensuring seamless transactions. With a deep understanding of local markets and a passion for delivering exceptional results, I am committed to helping clients achieve their real estate goals.",
+            "Whether buying, selling, or renting, I provide tailored guidance and support every step of the way. My expertise includes property valuation, market analysis, and negotiations. Let me help you navigate the Nigerian property market with confidence."
+            ],
+        "rating": 4.8,
+        "image": "https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064826.jpg?ga=GA1.1.608707904.1722074301&semt=sph"
+    },
+    {
+        "id": "2",
+        "name": "Grace Adeniyi",
+        "phone": "+234 5677 8911",
+        "email": "grace.adeniyi@example.com",
+        "listed": 5,
+        "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe", 
+        "experience": 10,
+        "overview": ["With 10 years of experience in delivering exceptional results for clients, I possess a unique blend of skills and expertise. My strengths lie in negotiations, market analysis, and property valuation, ensuring clients receive personalized services tailored to their needs.", "Throughout my career, I have developed a strong understanding of local markets and a passion for delivering results. This enables me to offer tailored solutions to clients, whether they are buying, selling, or renting properties.", "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer expert guidance and support every step of the way."],
+        "bio": [
+            "Results-driven realtor with 10 years of experience in delivering exceptional results for clients. Skilled in negotiations, market analysis, and property valuation. Committed to excellence, I provide personalized services tailored to each client's unique needs.",
+            "With a proven track record of success, I help clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer expert guidance and support every step of the way."
+            ],
+        "rating": 5,
+        "image": "https://img.freepik.com/free-photo/happy-confident-professional-having-great-idea_74855-2258.jpg?ga=GA1.1.608707904.1722074301&semt=sph"
+    },
+    {
+        "id": "3",
+        "name": "Peter Okeke",
+        "phone": "+234 5677 8912",
+        "email": "peter.okeke@example.com",
+        "listed": 5,
+        "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe", 
+        "experience": 3,
+        "overview": ["As a passionate real estate agent with 3 years of experience, I possess a strong knowledge of local markets and a dedication to providing top-notch services. My expertise lies in helping clients find their dream homes, ensuring seamless transactions and exceptional results.", "Throughout my career, I have developed a strong network of contacts and a keen eye for market trends. This enables me to offer expert guidance and support to clients, whether they are buying, selling, or renting properties.", "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer tailored guidance and support every step of the way."],
+        "bio": [
+            "Passionate real estate agent with 3 years of experience in helping clients find their dream homes. Strong knowledge of local markets and dedicated to providing top-notch services. I take pride in delivering exceptional results and ensuring seamless transactions.",
+            "From property viewings to closing deals, I provide personalized support and guidance. Let me help you navigate the Nigerian property market with confidence and achieve your real estate goals."
+            ],
+        "rating": 3.8,
+        "image": "https://img.freepik.com/free-photo/portrait-flight-attendant-with-plane-tickets-passport_23-2150282905.jpg?ga=GA1.1.608707904.1722074301&semt=ais_user"
+    },
+    {
+        "id": "4",
+        "name": "Chika Eze",
+        "phone": "+234 5677 8913",
+        "email": "chika.eze@example.com",
+        "listed": 5,
+        "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe", 
+        "experience": 4,
+        "overview": ["As a dedicated real estate professional with 4 years of experience, I possess a strong understanding of local markets and a passion for delivering results. My expertise lies in property marketing, sales, and customer relations, ensuring clients receive personalized services tailored to their needs.", "Throughout my career, I have developed a strong network of contacts and a keen eye for market trends. This enables me to offer expert guidance and support to clients, whether they are buying, selling, or renting properties.", "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer tailored guidance and support every step of the way." ],
+        "bio":[
+            "Dedicated real estate professional with 4 years of experience in providing personalized services to clients. Skilled in property marketing, sales, and customer relations. Committed to client satisfaction and delivering exceptional results.",
+            "With a strong understanding of local markets and a passion for delivering results, I help clients achieve their real estate goals. Whether buying, selling, or renting, I provide tailored guidance and support."
+            ],
+        "rating": 4.3,
+        "image": "https://img.freepik.com/free-photo/medium-shot-smiley-woman-desk_23-2148924767.jpg?ga=GA1.1.608707904.1722074301&semt=sph"
+    },
+    {
+        "id": "5",
+        "name": "Musa Aliyu",
+        "phone": "+234 5677 8914",
+        "email": "musa.aliyu@example.com",
+        "listed": 5,
+       "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe", 
+        "experience": 5,
+        "overview": ["With 5 years of experience in the Nigerian property market, I possess a deep understanding of local markets and a proven track record of delivering results. My expertise lies in property valuation, market analysis, and negotiations, ensuring seamless transactions for clients.", "Throughout my career, I have developed a strong network of contacts and a keen eye for market trends. This enables me to offer expert guidance and support to clients, whether they are buying, selling, or renting properties.", "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer tailored guidance and support every step of the way." ],
+        "bio": [
+            "Experienced realtor with 5 years of expertise in the Nigerian property market. Proven track record of delivering results and ensuring seamless transactions. Committed to excellence and providing personalized services.",
+            "From property valuation to market analysis, I offer expert guidance and support. Let me help you navigate the Nigerian property market with confidence and achieve your real estate goals."
+            ],
+        "rating": 4.7,
+        "image": "https://img.freepik.com/free-photo/front-view-man-working-as-real-estate-agent_23-2151064817.jpg?ga=GA1.1.608707904.1722074301&semt=sph"
+    },
+    {
+        "id": "6",
+        "name": "Tunde Babalola",
+        "phone": "+234 5677 8912",
+        "email": "tunde.babalola@example.com",
+        "listed": 5,
+        "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe", 
+        "experience": 6,
+        "overview": ["As a results-driven real estate agent with 6 years of experience, I possess a unique blend of skills and expertise. My strengths lie in negotiations, market analysis, and property valuation, ensuring clients receive personalized services tailored to their needs.", "Throughout my career, I have developed a strong understanding of local markets and a passion for delivering results. This enables me to offer tailored solutions to clients, whether they are buying, selling, or renting properties.", "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer expert guidance and support every step of the way." ],
+        "bio": [
+            "Results-driven real estate agent with 6 years of experience in delivering exceptional results for clients. Skilled in negotiations, market analysis, and property valuation. Dedicated to client satisfaction and delivering results.",
+            "With a proven track record of success, I help clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer expert guidance and support every step of the way."
+            ],
+        "rating": 3.8,
+        "image": "https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064834.jpg?ga=GA1.1.608707904.1722074301&semt=sph"
+    },
+    {
+        "id": "7",
+        "name": "Amina Yusuf",
+        "phone": "+234 5677 8913",
+        "email": "amina.yusuf@example.com",
+        "listed": 5,
+        "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe",  
+        "experience": 9,
+        "overview": ["As a seasoned real estate professional with 9 years of experience, I possess a deep understanding of the Nigerian property market. My expertise spans property marketing, sales, and customer relations, ensuring seamless transactions for clients.", "Throughout my career, I have developed a strong network of contacts and a keen eye for market trends. This enables me to offer expert guidance and support to clients, whether they are buying, selling, or renting properties.", "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer tailored guidance and support every step of the way." ],
+        "bio": [
+            "Seasoned real estate professional with 9 years of experience in providing personalized services to clients. Strong knowledge of local markets and dedicated to delivering exceptional results.",
+            "With a passion for delivering results and ensuring client satisfaction, I help clients achieve their real estate goals. Whether buying, selling, or renting, I provide tailored guidance and support."
+            ],
+        "rating": 4.3,
+        "image": "https://img.freepik.com/free-photo/portrait-senior-woman-professional-blazer-outdoors_23-2150296627.jpg?ga=GA1.1.608707904.1722074301&semt=ais_user"
+    },
+    {
+        "id": "8",
+        "name": "Chioma Uche",
+        "phone": "+234 5677 8914",
+        "email": "chioma.uche@example.com",
+        "listed": 5,
+        "facebook": "https://facebook.com/johndoe", 
+        "twitter": "https://facebook.com/johndoe", 
+        "linkedin": "https://facebook.com/johndoe", 
+        "experience": 3,
+        "overview": ["As a passionate real estate agent with 3 years of experience, I possess a strong knowledge of local markets and a dedication to providing top-notch services. My expertise lies in helping clients navigate the complex Nigerian property market, ensuring seamless transactions and exceptional results.", "Throughout my career, I have developed a strong network of contacts and a keen eye for market trends. This enables me to offer expert guidance and support to clients, whether they are buying, selling, or renting properties.", "With a proven track record of success, I am dedicated to helping clients achieve their real estate goals. Whether you're a first-time buyer or a seasoned investor, I offer tailored guidance and support every step of the way." ],
+        "bio": [
+            "Passionate real estate agent with 3 years of experience in helping clients navigate the complex Nigerian property market. Committed to providing top-notch services and ensuring seamless transactions.",
+            "From property viewings to closing deals, I provide personalized support and guidance. Let me help you achieve your real estate goals with confidence."],
+        "rating": 4.7,
+        "image": "https://img.freepik.com/free-photo/business-woman-smiling-close-up_23-2148336913.jpg?ga=GA1.1.608707904.1722074301&semt=ais_user"
+    }
+]

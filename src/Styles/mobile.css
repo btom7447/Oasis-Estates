@@ -1,0 +1,468 @@
+@media screen and (max-width: 450px) {
+
+    /* ROOT COLORS */
+    :root {
+        --black: #000;
+        --white: #fff;
+        --gray:  #D9D9D9;
+        --ash: #6D7175;
+        --primary-orange: #AA8453;
+        --secondary-orange: #52412e;
+        --secondary-background: rgba(170, 132, 83, 0.1);
+        --dark: #12171f;
+    }
+
+    /* BREAD CRUMB */
+    .bread-crumb-section {
+        padding-top: 150px;
+    }
+
+    .navbar {
+        display: none;
+    }
+    .header {
+        width: 100%;
+    }
+    .top-header {
+        width: 100%;
+        padding: 1rem 2rem;
+        color: var(--dark);
+        background-color: var(--white);
+    }
+    .mobile-navbar {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        background-color: var(--dark);
+        color: var(--white);
+    }
+    .mobile-navbar .navbar-header {
+        width: 100%;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9000;
+    }
+    .mobile-navbar .navbar-toggler {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+    }
+    .mobile-navbar .navbar-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: var(--dark);
+        z-index: 8900;
+        max-height: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow-y: scroll;
+        transition: max-height 1.2s cubic-bezier(0.65, 0.05, 0.36, 1) 0.2s;
+    }
+    .mobile-navbar .navbar-menu.open {
+        display: flex;
+        max-height: 500px; 
+    }
+    .mobile-navbar .navbar-links {
+        padding-top: 20px;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .mobile-navbar .navbar-links li {
+        width: 100%;
+        font-family: 'Sen', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 0px;
+        padding: 1rem 0rem;
+    }
+    .mobile-navbar .dropdown span {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-navbar .navbar-links a { 
+        color: var(--white);
+        text-decoration: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+    }
+    .mobile-navbar .navbar-links button {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 45px;
+        border: none;
+        border-radius: 0;
+        padding: 0 25px;
+        color: var(--black);
+        background-color: var(--white);
+        transition: color 0.3s, background-color 0.3s ease-in-out;
+    }
+    .mobile-navbar .navbar-links button:hover {
+        color: var(--white);
+        background-color: var(--primary-orange);
+    }
+      
+    .mobile-navbar .dropdown-content {
+        display: none;
+        flex-direction: column;
+        background-color: var(--dark);
+        margin-top: 1rem;
+        padding: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .mobile-navbar .dropdown-content a {
+        padding: 20px;
+    }
+    .mobile-navbar .dropdown-content.open {
+        display: flex;
+    }
+    
+    /* FOOTER  */
+    footer .footer-top {
+        padding: 50px 20px;
+    }
+    footer .footer-top h3 {
+        font-size: 22px;
+    }
+    footer .footer-top button {
+        margin-top: 20px;
+    }
+    footer .footer-bottom {
+        padding: 50px 20px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* LOGIN PAGE */
+    .login-section {
+        width: 100%;
+        padding: 50px 20px;
+    }
+    .login-form {
+        padding: 20px;
+        min-width: 100%;
+    }
+    .password-wrapper input {
+        padding-right: 20px; 
+    }
+    .password-toggle {
+        position: absolute;
+        right: 20px;
+        top: 35%;
+        transform: translateY(-50%);
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .login-form .button {
+        width: 100%;
+    }
+
+    /* HOME PAGE */
+    /* HERO SECTION */
+    .hero-section {
+        margin-top: 100px;
+        height: 100vh;
+    }
+    .hero-section .hero-section-caption {
+        width: 90%;
+    }
+    /* HERO SEARCH BOX */
+    .hero-search-box {
+        margin-top: 30px;
+        width: 90%;
+    }
+    .hero-search-box form {
+        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+
+    }
+    .hero-search-box form  button {
+        width: 100%;
+    }
+
+    /* FEATURED PROPERTIES */
+    .featured-properties {
+        padding: 50px 20px;
+    }
+    .featured-properties .featured-properties-caption {
+        width: 100%;
+    }
+    .featured-properties  .featured-carousel {
+        margin-top: 20px;
+        padding-bottom: 50px;
+    }
+    .featured-properties  .featured-carousel .splide__pagination {
+        bottom: -4rem !important;
+    }
+    
+    /* SEARCH BY CITY */
+    .search-by-city {
+        padding: 50px 20px;
+    }
+    .search-by-city .search-city-caption {
+        width: 100%;
+    }
+    .search-by-city .locations-container {
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+    }
+    .search-by-city .location-box:nth-of-type(1) {
+        grid-column: span 1;
+    }
+    .search-by-city .location-box:nth-of-type(6) {
+        grid-column: span 1;
+    }
+
+    /* STATISTICS SECTION */
+    .statistics-section {
+        padding: 50px 20px;
+        gap: 20px;
+    }
+    .statistics-section .statistics {
+        width: 100%;
+    }
+
+    /* TESTIMONIAL SECTION */
+    .testimonial-section {
+        padding: 50px 20px;
+    }
+    .testimonial-section .testimonial-section-caption {
+        width: 100%;
+    }
+    .testimonial-section .testimonial-carousel {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .testimonial-section .testimonial {
+        text-align: center;
+        padding: 20px;
+    }
+    .testimonial-section  .testimonial-carousel .splide__pagination {
+        text-align: center;
+        bottom: -2rem !important;
+    }
+
+    /* PROMOTIONAL VIDEO SECTION */
+    .promotional-video-section {
+        height: 60vh;
+        background-position-y: 0px;
+        padding: 50px 20px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .promotional-video-section .video-modal-content {
+        width: 90%;
+        max-width: 800px;
+        height: 30%;
+    }
+    .promotional-video-section iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* LISTING */
+    /* LISTING FILTERS */
+    .listings .listing-filters {
+        padding: 20px;
+    }
+    .listings .listing-filters form {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px; 
+    }
+    
+    /* LISTING DISPLAY */
+    .listings .listing-display {
+        padding: 20px;
+    }
+    .property-grid {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+    }
+    
+    /* PROPERTY CARD */
+    .property-card .property-carousel {
+        height: 200px; 
+    }
+    .property-card .property-carousel img {
+        height: 200px;
+    }
+    .property-card .property-agent {
+        flex-wrap: wrap;
+    }
+
+    /* PROPERTY DETAILS  */
+    .property-details .main-slide {
+        width: 100%;
+        position: relative;
+    }
+    .property-details .thumbnail-slide {
+        padding: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .property-details .thumbnail-slide:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); 
+    }
+    .property-details .splide__track {
+        overflow: hidden;
+    }
+    
+    /* PROPERTY INFO */
+    .property-details {
+        padding-top: 150px ;
+    }
+    .property-details .property-info {
+        padding: 50px 10px;
+        flex-direction: column;
+    }
+    .property-details .property-info .property-description {
+        width: 100%;
+        padding: 20px;
+    }
+    .property-details .property-info .property-realtor {
+        width: 100%;
+        padding: 20px;
+    }
+    .property-details .price-tag {
+        position: unset;
+        top: unset;
+        right: unset;
+        margin-bottom: 20px;
+    }
+    .property-details .price-tag h2 {
+        margin: 0;
+    }
+    .property-details .functional-buttons {
+        width: 100%;
+        justify-content: space-between;
+        margin: 10px 0px;
+    }
+    .property-details .property-specs {
+        flex-wrap: wrap;
+    }
+    .property-details .property-realtor .realtor {
+        flex-wrap: wrap;
+    }
+
+    /* ABOUT US PAGE */
+    .company-overview {
+        padding: 20px;
+        padding-top: 70px;
+    }
+    .company-overview .company-overview-caption {
+        margin-top: 50px;
+        width: 100%;
+    }
+    .company-overview .company-overview-caption h1 {
+        font-size: 25px;
+    }
+    .company-overview .company-overview-caption h6 {
+        font-size: 15px;
+    }
+    
+    /* MISSION STATMENT */
+    .mission-section {
+        padding: 50px 20px;
+    }
+    .mission-section .mission-caption {
+        width: 100%;
+    }
+    .mission-section .mission-text {
+        width: 100%;
+    }
+    .mission-section .mission-list {
+        width: 100%;
+    }
+
+    /* TERMS CONDITION PAGE */
+    .terms-condition-container {
+        padding: 50px 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .terms-condition-container .terms-condition-nav {
+        min-width: 100%;
+        position: unset;
+    }
+    .terms-condition-container .terms-condition-display {
+        width: 100%;
+    }
+
+    /* REALTORS CARD */
+    .realtors-display {
+        padding: 50px 20px;
+    }
+  
+    .realtor-profile {
+        padding: 50px 20px;
+    }
+    .realtor-profile .realtor-caption {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; 
+    }
+    .realtor-profile .realtor-caption img {
+        width: 100%; 
+        height: 400px; 
+    }
+    .realtor-profile .realtor-details {
+        padding: 20px; 
+    }
+    .realtor-profile .realtor-description {
+        padding: 20px 0px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .realtor-profile .realtor-overview {
+        width: 100%;
+        padding: 20px;
+    }
+    .realtor-profile .realtor-message {
+        width: 100%;
+    }
+  
+    /* * {
+        outline: red solid 1px;
+    } */
+  
+}
