@@ -36,7 +36,9 @@ const Footer = () => {
                 <div className="footer-column">
                     <h4>Appointment</h4>
                     <h6>Disucss your Real Estate Needs with Our Experts - Book an Appointment Today</h6>
-                    <button type="button">Book Appointment</button>
+                    <Link to="/realtors">
+                        <button type="button">Book Appointment</button>
+                    </Link>
                 </div>
             </div>
         </footer>

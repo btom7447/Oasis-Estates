@@ -1,9 +1,16 @@
 import React from "react";
+import BreadCrumb from "../Components/BreadCrumb";
+import GetInTouch from "../Components/GetInTouch";
+import ContactAccordion from "../Components/ContactAccordion";
+import ContactForm from "../Components/ContactForm";
 
 const Contact = () => {
     return (
         <div className="web-page">
-            <h1>Contact page</h1>
+            <BreadCrumb name="Contact Us" />
+            <GetInTouch />
+            <ContactAccordion />
+            <ContactForm />
         </div>
     )
 };

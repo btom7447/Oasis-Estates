@@ -1,4 +1,5 @@
-import {  faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
 
@@ -20,39 +21,39 @@ const Navbar = () => {
         };
     }, []);
 
-    const handleNavigation = (url) => {
-        window.location.href = url;
-    };
-
     return (
         <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
-            <div className="nav-logo" onClick={() => handleNavigation('/')}>
-                <img src="https://unicoderbd.com/template/uniland/fullwidth/assets/images/logo/logo-white.png" alt="website logo" />
+            <div className="nav-logo">
+                <Link to="/">
+                    <img src="https://unicoderbd.com/template/uniland/fullwidth/assets/images/logo/logo-white.png" alt="website logo" />
+                </Link>
             </div>
 
             <ul className="navbar-links">
                 <li>
-                    <span onClick={() => handleNavigation('/')}>Home</span>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <span onClick={() => handleNavigation('/about')}>About</span>
+                    <Link to="/about">About</Link>
                 </li>
                 <li>
-                    <span onClick={() => handleNavigation('/listings')}>Listings</span>
+                    <Link to="/listings">Listings</Link>
                 </li>
                 <li>
-                    <span onClick={() => handleNavigation('/realtors')}>Realtors</span>
+                    <Link to="/realtors">Realtors</Link>
                 </li>
                 <li>
-                    <span onClick={() => handleNavigation('/contact')}>Contact</span>
+                    <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                    <span onClick={() => handleNavigation('/login')}>
+                    <Link to="/login">
                         <FontAwesomeIcon icon={faUserAlt} /> Sign In/Register
-                    </span>
+                    </Link>
                 </li>
                 <li>
-                    <button onClick={() => handleNavigation('/create-listing')}>Create Listing</button>
+                    <Link to="/create-listing">
+                        <button>Create Listing</button>
+                    </Link>
                 </li>
             </ul>
         </nav>

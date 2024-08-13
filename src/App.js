@@ -21,25 +21,24 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import ForgotPassword from './Pages/ForgotPassword';
 import TermsCondition from './Pages/TermsCondition';
-import RealtorsDisplay from './Components/RealtorsDisplay';
 import RealtorsProfile from './Pages/RealtorsProfile';
 
 const App = () => {
   return (
     <PropertyProvider>
-      <Router>
+      <Router basename='/Oasis-Estates'> 
         <ScrollToTop />
         <LoaderWrapper />
         <Header />
-        <Routes>  
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} /> 
           <Route path="/listings" element={<Listings />} /> 
           <Route path="/property-details/:id" element={<PropertyDetails />} />
           <Route path="/contact" element={<Contact />} /> 
           <Route path="/realtors" element={<Realtors />} /> 
-          <Route path="/realtors" element={<RealtorsDisplay />} />
-          <Route path="/realtor/:name" element={<RealtorsProfile />} />          <Route path="/login" element={<Login />} />
+          <Route path="/realtor/:name" element={<RealtorsProfile />} /> 
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/terms-condition" element={<TermsCondition />} />

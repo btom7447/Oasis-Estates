@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const MobileNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,16 +10,12 @@ const MobileNavbar = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleNavigation = (url) => {
-        window.location.href = url;
-    };
-
     return (
         <nav className="mobile-navbar">
             <div className="navbar-header">
-                <div className="nav-logo" onClick={() => handleNavigation('/')}>
+                <Link to="/" className="nav-logo">
                     <img src="https://unicoderbd.com/template/uniland/fullwidth/assets/images/logo/logo-white.png" alt="website logo" />
-                </div>
+                </Link>
                 <button onClick={handleToggle} className="navbar-toggler">
                     <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
                 </button>
@@ -26,27 +23,29 @@ const MobileNavbar = () => {
             <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
                 <ul className="navbar-links">
                     <li>
-                        <span onClick={() => handleNavigation('/')}>Home</span>
+                        <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
                     </li>
                     <li>
-                        <span onClick={() => handleNavigation('/about')}>About</span>
+                        <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
                     </li>
                     <li>
-                        <span onClick={() => handleNavigation('/listings')}>Listings</span>
+                        <Link to="/listings" onClick={() => setIsOpen(false)}>Listings</Link>
                     </li>
                     <li>
-                        <span onClick={() => handleNavigation('/realtors')}>Realtors</span>
+                        <Link to="/realtors" onClick={() => setIsOpen(false)}>Realtors</Link>
                     </li>
                     <li>
-                        <span onClick={() => handleNavigation('/contact')}>Contact</span>
+                        <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
                     </li>
                     <li>
-                        <span onClick={() => handleNavigation('/login')}>
+                        <Link to="/login" onClick={() => setIsOpen(false)}>
                             <FontAwesomeIcon icon={faUserAlt} /> Sign In/Register
-                        </span>
+                        </Link>
                     </li>
                     <li>
-                        <button onClick={() => handleNavigation('/create-listing')}>Create Listing</button>
+                        <Link to="/create-listing" onClick={() => setIsOpen(false)}>
+                            <button>Create Listing</button>
+                        </Link>
                     </li>
                 </ul>
             </div>
