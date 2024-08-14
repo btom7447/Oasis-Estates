@@ -51,7 +51,7 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/create-listing">
+                    <Link to="/user-admin/create-listing">
                         <button>Create Listing</button>
                     </Link>
                 </li>

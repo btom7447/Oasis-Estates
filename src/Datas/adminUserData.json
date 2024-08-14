@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Benjamin Tom",
+        "image": "https://unicoderbd.com/template/uniland/fullwidth/assets/images/user1.jpg",
+        "earning": 1500000,
+        "listedProperties": 8,
+        "purchasedProperties": 3,
+        "pendingProperties": 2,
+        "monthlyData": [
+            { "month": "Jan", "views": 400 },
+            { "month": "Feb", "views": 300 },
+            { "month": "Mar", "views": 200 },
+            { "month": "Apr", "views": 278 },
+            { "month": "May", "views": 189 },
+            { "month": "Jun", "views": 239 },
+            { "month": "Jul", "views": 349 },
+            { "month": "Aug", "views": 200 },
+            { "month": "Sep", "views": 278 },
+            { "month": "Oct", "views": 189 },
+            { "month": "Nov", "views": 239 },
+            { "month": "Dec", "views": 349 }
+        ],
+        "yearlyData": [
+            { "year": "2021", "views": 4000 },
+            { "year": "2022", "views": 3000 },
+            { "year": "2023", "views": 2780 }
+        ]
+    }
+]

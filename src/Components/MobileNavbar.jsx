@@ -43,7 +43,7 @@ const MobileNavbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/create-listing" onClick={() => setIsOpen(false)}>
+                        <Link to="/user-admin/create-listing" onClick={() => setIsOpen(false)}>
                             <button>Create Listing</button>
                         </Link>
                     </li>
