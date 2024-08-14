@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Oasis-Estates/static/css/main.7f2ddb14.css",
-    "main.js": "/Oasis-Estates/static/js/main.e30dbc36.js",
+    "main.css": "/Oasis-Estates/static/css/main.dcfe19a4.css",
+    "main.js": "/Oasis-Estates/static/js/main.308dfe9b.js",
     "static/js/239.60fde1c8.chunk.js": "/Oasis-Estates/static/js/239.60fde1c8.chunk.js",
     "static/js/213.ef348a20.chunk.js": "/Oasis-Estates/static/js/213.ef348a20.chunk.js",
     "static/js/455.880443f4.chunk.js": "/Oasis-Estates/static/js/455.880443f4.chunk.js",
     "static/js/453.7391e403.chunk.js": "/Oasis-Estates/static/js/453.7391e403.chunk.js",
     "index.html": "/Oasis-Estates/index.html",
-    "main.7f2ddb14.css.map": "/Oasis-Estates/static/css/main.7f2ddb14.css.map",
-    "main.e30dbc36.js.map": "/Oasis-Estates/static/js/main.e30dbc36.js.map",
+    "main.dcfe19a4.css.map": "/Oasis-Estates/static/css/main.dcfe19a4.css.map",
+    "main.308dfe9b.js.map": "/Oasis-Estates/static/js/main.308dfe9b.js.map",
     "239.60fde1c8.chunk.js.map": "/Oasis-Estates/static/js/239.60fde1c8.chunk.js.map",
     "213.ef348a20.chunk.js.map": "/Oasis-Estates/static/js/213.ef348a20.chunk.js.map",
     "455.880443f4.chunk.js.map": "/Oasis-Estates/static/js/455.880443f4.chunk.js.map",
     "453.7391e403.chunk.js.map": "/Oasis-Estates/static/js/453.7391e403.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f2ddb14.css",
-    "static/js/main.e30dbc36.js"
+    "static/css/main.dcfe19a4.css",
+    "static/js/main.308dfe9b.js"
   ]
 }
