@@ -42,6 +42,16 @@ const ListingForm = () => {
         { value: "parkingSpace", label: "Parking Space" },
         { value: "elevator", label: "Elevator" },
         { value: "guestHouse", label: "Guest House" },
+        { value: "storageRoom", label: "Storage Room" },
+        { value: "conferenceRoom", label: "Conference Room" },
+        { value: "highSpeedInternet", label: "High-Speed Internet" },
+        { value: "studyArea", label: "Study Area" },
+        { value: "laundryService", label: "Laundry Service" },
+        { value: "meetingRooms", label: "Meeting Rooms" },
+        { value: "cctv", label: "CCTV" },
+        { value: "Elevator", label: "Elevator" },
+        { value: "Garden", label: "Garden" },
+        { value: "Balcony", label: "Balcony" },
     ];
 
     useEffect(() => {

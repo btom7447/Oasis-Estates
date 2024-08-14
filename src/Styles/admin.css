@@ -562,7 +562,7 @@ a {
     width: 120px;
     height: 80px;
     object-fit: cover;
-    object-position: calc();
+    object-position: center;
 }
 .listed-properties .listed-property-card h4 {
     font-size: 18px;
@@ -605,7 +605,7 @@ a {
     z-index: 9999;
 }
 .delete-modal {
-    min-width: 400px;
+    width: 50%;
     background-color: var(--white);
     border: solid 1px var(--gray);
     border-radius: 5px;
@@ -635,8 +635,91 @@ a {
     border-radius: 5px;
     padding: 0 25px;
     color: var(--white);
-    transition: color 0.3s, background-color 0.3s ease-in-out;
+    opacity: 1;
+    transition: color 0.3s, opacity 0.3s, background-color 0.3s ease-in-out;
     cursor: pointer;
+}
+.delete-modal .modal-buttons button:hover {
+    opacity: 0.8;
+}
+.delete-modal .modal-buttons button:nth-of-type(1) {
+    background-color: red;
+}
+.delete-modal .modal-buttons button:nth-of-type(2) {
+    background-color: var(--primary-orange);
+}
+/* EDIT MODAL */
+.edit-modal {
+    min-width: 70%;
+    background-color: var(--white);
+    border: solid 1px var(--gray);
+    border-radius: 5px;
+    padding: 20px;
+}
+.edit-modal .edit-modal-container {
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll; 
+    padding-right: 10px;
+}
+.edit-modal h2 {
+    font-size: 20px;
+    font-family: 'Sen', sans-serif;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+.edit-modal p {
+    font-family: 'Sen', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+}
+.edit-modal .modal-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.edit-modal .modal-buttons button {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 25px;
+    color: var(--white);
+    opacity: 1;
+    transition: color 0.3s, opacity 0.3s, background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.edit-modal .modal-buttons button:hover {
+    opacity: 0.8;
+}
+.edit-modal .modal-buttons button:nth-of-type(2) {
+    color: var(--primary-orange);
+    background-color: var(--white);
+    border: solid 1px var(--primary-orange);
+}
+.edit-modal .modal-buttons button:nth-of-type(1) {
+    background-color: var(--primary-orange);
+}
+.edit-modal .edit-form  {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.edit-modal .listing-form {
+    padding: 20px;
+    padding-bottom: 150px;
+}
+.edit-modal .listing-form label textarea {
+    min-height: 150px;
+}
+.edit-modal .listing-form .modal-buttons {
+    grid-column: 1 / -1;
 }
 
 

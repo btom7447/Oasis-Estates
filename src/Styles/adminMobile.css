@@ -92,6 +92,50 @@
     }
 
 
+    /* MY PROPERTIES PAGE */
+    .admin-properties {
+        padding: 20px;
+    }
+    .listed-properties {
+        margin-top: 20px;
+    }
+    .listed-properties .added-date {
+        display: none;
+    }
+    .listed-properties td {
+        padding: 10px 5px;
+    }
+    .listed-properties button {
+        margin: auto 5px;
+    }
+    .listed-properties .listed-card {
+        width: 300px;
+    }
+    .listed-properties .listed-property-card {
+        flex-direction: column;
+    }
+    .listed-properties .listed-property-card img {
+        width: 180px;
+    }
+
+    /* LISTED PROPERTIES MODALS */
+    .delete-modal {
+        width: 90%;
+    }
+    /* EDIT MODAL */
+    .edit-modal {
+        min-width: 90%;
+    }
+    .edit-modal .edit-modal-container {
+        width: 100%;
+        height: 70vh;
+    }
+    .edit-modal .listing-form {
+        padding: 20px;
+        padding-bottom: 80px;
+    }
+
+
     /* * {
         outline: red solid 1px ;
     } */
