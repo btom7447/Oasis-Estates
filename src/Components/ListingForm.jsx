@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
+import { toast, ToastContainer } from 'react-toastify'; // Import Toastify
+import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 
 const ListingForm = () => {
     const [formData, setFormData] = useState({
@@ -37,17 +39,15 @@ const ListingForm = () => {
         { value: "waterHeater", label: "Water Heater" },
         { value: "electricity", label: "Electricity" },
         { value: "swimmingPool", label: "Swimming Pool" },
-        { value: "parkingSpace", label: "Space Space" },
+        { value: "parkingSpace", label: "Parking Space" },
         { value: "elevator", label: "Elevator" },
         { value: "guestHouse", label: "Guest House" },
-
     ];
 
     useEffect(() => {
         // Load data from local storage
         const savedData = localStorage.getItem('properties');
         if (savedData) {
-            // const properties = JSON.parse(savedData);
             // Optionally: Set some default data or handle as needed
         }
     }, []);
@@ -76,6 +76,20 @@ const ListingForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Validate the form
+        const {
+            title, description, propertyType, propertyStatus,
+            price, city, address, area, bedrooms, bathrooms, highlights
+        } = formData;
+
+        if (
+            !title || !description || !propertyType || !propertyStatus ||
+            !price || !city || !address || !area || !bedrooms || !bathrooms || highlights.length === 0
+        ) {
+            toast.error("Please input all property details");
+            return;
+        }
 
         // Get existing properties from local storage
         const existingProperties = JSON.parse(localStorage.getItem('properties')) || [];
@@ -106,7 +120,7 @@ const ListingForm = () => {
             highlights: [],
         });
 
-        alert('Property information saved successfully!');
+        toast.success("Property Information Saved!");
     };
 
     return (
@@ -250,6 +264,7 @@ const ListingForm = () => {
             <div>
                 <button type="submit">Save Information</button>
             </div>
+            <ToastContainer /> 
         </form>
     );
 };

@@ -39,31 +39,32 @@ const AdminMobileNavbar = () => {
                         <FontAwesomeIcon icon={faDollar} />
                         <Link to="earnings">Earnings</Link>
                     </li>
-                    <li className={location.pathname.includes('my-properties') ? 'active' : ''}>
-                        <FontAwesomeIcon icon={faHouse} />
-                        <Link to="my-properties">My Properties</Link>
-                    </li>
                     <li className={location.pathname.includes('create-listing') ? 'active' : ''}>
                         <FontAwesomeIcon icon={faPlusSquare} />
                         <Link to="create-listing">Create Listing</Link>
                     </li>
-                    <li className={location.pathname.includes('property-reviews') ? 'active' : ''}>
+                    <li className={location.pathname.includes('my-properties') ? 'active' : ''}>
+                        <FontAwesomeIcon icon={faHouse} />
+                        <Link to="my-properties">My Properties</Link>
+                    </li>
+                    <li className={location.pathname.includes('reviews') ? 'active' : ''}>
                         <FontAwesomeIcon icon={faStar} />
                         <Link to="reviews">Reviews</Link>
                     </li>
-                    <li className={location.pathname.includes('property-reviews') ? 'active' : ''}>
+                    <li>Account Settings</li>
+                    <li className={location.pathname.includes('personal-profile') ? 'active' : ''}>
                         <FontAwesomeIcon icon={faUserAlt} />
                         <Link to="personal-profile">Personal Profile</Link>
                     </li>
-                    <li className={location.pathname.includes('property-reviews') ? 'active' : ''}>
+                    <li className={location.pathname.includes('profile-settings') ? 'active' : ''}>
                         <FontAwesomeIcon icon={faUserGear} />
                         <Link to="profile-settings">Profile Settings</Link>
                     </li>
-                    <li className={location.pathname.includes('property-reviews') ? 'active' : ''}>
+                    <li className={location.pathname.includes('change-password') ? 'active' : ''}>
                         <FontAwesomeIcon icon={faEye} />
                         <Link to="change-password">Change Password</Link>
                     </li>
-                    <li className={location.pathname.includes('property-reviews') ? 'active' : ''}>
+                    <li className={location.pathname.includes('logout') ? 'active' : ''}>
                         <FontAwesomeIcon icon={faArrowRightArrowLeft} />
                         <Link to="logout">Logout</Link>
                     </li>

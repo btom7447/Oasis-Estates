@@ -6,7 +6,9 @@ const Footer = () => {
         <footer>
             <div className="footer-top">
                 <h3>Are you looking to sell your house or property? We can help!</h3>
-                <button type="button">List your property</button>
+                <Link to="/user-admin/create-listing">
+                    <button type="button">List your property</button>
+                </Link>
             </div>
             <div className="footer-bottom">
                 <div className="footer-column">
@@ -27,8 +29,8 @@ const Footer = () => {
                 <div className="footer-column">
                     <h4>Quick Links</h4>
                     <ul className="footer-links">
-                        <li>Create Listing</li>
-                        <li><Link to="/listings">Listings</Link></li>
+                    <li><Link to="/user-admin/create-listing">Create Listing</Link></li>
+                    <li><Link to="/listings">Listings</Link></li>
                         <li><Link to="/realtors">Realtors</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                     </ul> 

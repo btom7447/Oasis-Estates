@@ -230,8 +230,8 @@ a {
     width: 100%;
     height: 400px;
 }
-
 .dashboard-graph button {
+    margin-bottom: 30px;
     font-weight: 500;
     font-size: 15px;
     line-height: 45px;
@@ -284,7 +284,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-family: 'Sen', sans-serif;
+    font-family: 'Barlow', sans-serif;
     line-height: 25px;
     font-size: 15px;
     color: var(--black); 
@@ -379,6 +379,266 @@ a {
     background-color: var(--white);
     color: var(--primary-orange);
 }
+/* LISTING MEDIA UPLOAD */
+.listing-media-section {
+    margin-top: 30px;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    background-color: var(--white);
+    border: solid 1px var(--gray);
+    border-radius: 5px;
+}
+.listing-media-section h2 {
+    font-size: 20px;
+    font-family: 'Sen', sans-serif;
+    color: var(--black);
+}
+.listing-media-section p {
+    font-family: 'Barlow', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--black);
+}
+.listing-media-section .media-input {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: flex-start;
+}
+.listing-media-section .dropzone {
+    width: 100%;
+    height: 300px;
+    border: 2px dashed var(--primary-orange);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.listing-media-section .dropzone p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--secondary-orange);
+}
+.listing-media-section .dropzone input {
+    display: none;
+}
+.listing-media-section .image-preview {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    gap: 10px;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    transition: height 0.3s ease;
+}
+.listing-media-section .image-preview.empty {
+    height: 0; 
+    overflow: hidden;
+}
+.listing-media-section .image-preview::-webkit-scrollbar {
+    height: 5px; 
+}
+.listing-media-section .image-preview::-webkit-scrollbar-thumb {
+    background-color: var(--ash); 
+}
+.listing-media-section .image-preview .image-container {
+    width: 220px;
+    height: 200px;
+    position: relative;
+    flex-shrink: 0; 
+}
+.listing-media-section .image-preview .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+.listing-media-section .image-preview .image-container .delete-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color: red;
+    border: none;
+    font-size: 15px;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 10;
+}
+.listing-media-section .image-preview .image-container .delete-button:hover {
+    background-color: rgba(255, 0, 0, 0.8); 
+}
+.listing-media-section .save-media {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 25px;
+    color: var(--white);
+    border: solid 1px var(--primary-orange);
+    background-color: var(--primary-orange);
+    transition: color 0.3s, background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.listing-media-section .save-media:hover {
+    background-color: var(--white);
+    color: var(--primary-orange);
+}
+
+/* MY PROPERTIES PAGE */
+.admin-properties {
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+}
+.admin-properties h1 {
+    font-size: 24px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    color: var(--black);
+}
+.listed-properties {
+    margin-top: 30px;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: solid 1px var(--gray);
+}
+.listed-properties table {
+    padding: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+.listed-properties th, 
+.listed-properties td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray);
+}
+.listed-properties th {
+    padding: 20px 10px;
+    font-size: 18px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 500;
+    color: var(--black);
+}
+.listed-properties button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 18px;
+    margin: auto 10px;
+}
+.listed-properties button:first-of-type {
+    color: var(--primary-orange);
+}
+.listed-properties button:last-of-type {
+    color: red;
+}
+.listed-properties .listed-property-card {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+.listed-properties .listed-property-card img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    object-position: calc();
+}
+.listed-properties .listed-property-card h4 {
+    font-size: 18px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 500;
+    color: var(--black);
+}
+.listed-properties .listed-property-card .property-icon {
+    margin: 5px auto;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-family: 'Sen', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--black);
+}
+.listed-properties .listed-property-card .property-icon svg {
+    color: var(--primary-orange);
+    font-size: 18px;
+}
+.listed-properties .listed-property-card p {
+    font-family: 'Sen', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--primary-orange);
+}
+
+/* LISTED PROPERTIES MODALS */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.delete-modal {
+    min-width: 400px;
+    background-color: var(--white);
+    border: solid 1px var(--gray);
+    border-radius: 5px;
+    padding: 20px;
+}
+.delete-modal h2 {
+    font-size: 20px;
+    font-family: 'Sen', sans-serif;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+.delete-modal p {
+    font-family: 'Sen', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+}
+.delete-modal .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.delete-modal .modal-buttons button {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 25px;
+    color: var(--white);
+    transition: color 0.3s, background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 
 /* * {
     outline: red solid 1px;

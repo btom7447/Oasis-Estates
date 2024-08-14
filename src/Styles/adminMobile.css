@@ -74,6 +74,22 @@
         min-height: 100px;
     }
 
+    /* LISTING MEDIA UPLOAD */
+    .listing-media-section {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .listing-media-section .dropzone {
+        width: 100%;
+        height: 180px;
+    }
+    .listing-media-section .image-preview {
+        height: 150px;
+    }
+    .listing-media-section .image-preview .image-container {
+        width: 250px;
+        height: 170px;
+    }
 
 
     /* * {
