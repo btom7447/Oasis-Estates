@@ -1,7 +1,17 @@
 [
     {
         "name": "Benjamin Tom",
-        "image": "https://unicoderbd.com/template/uniland/fullwidth/assets/images/user1.jpg",
+        "userName": "benjamintom7447", 
+        "email": "benjamin@gmail.com", 
+        "phone": "+2345678910", 
+        "address": "3170 Heaven Lane, Nigeria",
+        "bio": ["dfdf"], 
+        "facebook": "", 
+        "twitter": "", 
+        "linkedin": "", 
+        "instagram": "", 
+        "website": "", 
+        "image": "https://img.freepik.com/free-photo/young-successful-african-businessman-posing-dark_176420-4969.jpg?semt=ais_hybrid",
         "earning": 1500000,
         "listedProperties": 8,
         "purchasedProperties": 3,
@@ -24,6 +34,6 @@
             { "year": "2021", "views": 4000 },
             { "year": "2022", "views": 3000 },
             { "year": "2023", "views": 2780 }
-        ]
+        ] 
     }
 ]

@@ -27,7 +27,7 @@ const ForgotPassword = () => {
 
     return (
         <div className="web-page">
-            <BreadCrumb name="login" />
+            <BreadCrumb name="Forgot Password" />
             <div className="login-section">
                 <form onSubmit={handleSubmit} className="login-form">
                     <h1>Forgot Password</h1>

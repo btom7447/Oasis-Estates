@@ -69,7 +69,7 @@ a {
     padding: 5px 20px;
     font-family: 'Sen', sans-serif;
     line-height: 25px;
-    font-size: 15px;
+    font-size: 13px;
     color: var(--white);
     display: flex;
     gap: 10px;
@@ -88,8 +88,28 @@ a {
     font-size: 13px;
     color: var(--white);
 }
+.admin-sidebar button {
+    width: 100%;
+    padding: 5px 0px;
+    font-family: 'Sen', sans-serif;
+    line-height: 25px;
+    font-size: 13px;
+    color: var(--white);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+    border: none;
+}
 .admin-content {
     /* flex-grow: 1; */
+    padding-bottom: 60px;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: var(--secondary-background);
 }
 .admin-content .admin-navbar {
@@ -156,7 +176,16 @@ a {
     object-fit: cover;
     border-radius: 50%;
 }
-
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+    color: var(--ash);
+}
 /* DASHBOARD PAGE */
 .dashboard-page {
     width: 100%;
@@ -722,6 +751,180 @@ a {
     grid-column: 1 / -1;
 }
 
+
+/* PROFILE SECTION */
+.admin-personal-profile {
+    width: 100%;
+    padding: 50px;
+}
+.admin-personal-profile h1 {
+    font-size: 24px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    color: var(--black);
+}
+.admin-personal-profile .profile-section {
+    margin-top: 30px;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    background-color: var(--white);
+    border: solid 1px var(--gray);
+    border-radius: 5px;
+}
+.profile-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.profile-form .profile-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: 1 / -1;
+}
+.profile-form .profile-image img {
+    width: 260px;
+    height: 260px;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-form label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Barlow', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--black); 
+}
+.profile-form label input {
+    width: 100%;
+    padding: 10px;
+    border: solid 1px var(--gray);
+    border-radius: 5px;
+    font-family: 'Sen', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--black);
+}
+.profile-form label textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: solid 1px var(--gray);
+    border-radius: 5px;
+    font-family: 'Sen', sans-serif;
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--black);
+}
+.profile-form label:has(textarea), 
+.profile-form .title-div {
+    grid-column: 1 / -1;
+}
+.profile-form button {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 25px;
+    color: var(--white);
+    border: solid 1px var(--primary-orange);
+    background-color: var(--primary-orange);
+    transition: color 0.3s, background-color 0.3s ease-in-out;
+}
+.profile-form button:hover {
+    background-color: var(--white);
+    color: var(--primary-orange);
+}
+.profile-settings {
+    margin-top: 30px;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    background-color: var(--white);
+    border: solid 1px var(--gray);
+    border-radius: 5px;
+}
+.profile-settings .profile-settings-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+.profile-settings .profile-settings-form button {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 25px;
+    color: var(--white);
+    border: solid 1px var(--primary-orange);
+    background-color: var(--primary-orange);
+    transition: color 0.3s, background-color 0.3s ease-in-out;
+}
+.profile-settings .profile-settings-form button:hover {
+    background-color: var(--white);
+    color: var(--primary-orange);
+}
+.profile-settings-form .email-setting-checkboxes {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.email-setting-checkboxes input[type="checkbox" i]  {
+    margin-top: 3px;
+    padding: 10px !important;
+    cursor: pointer;
+    accent-color: var(--primary-orange);
+}
+.email-setting-checkboxes .checkbox-texts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+.email-setting-checkboxes .checkbox-texts h6 {
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    color: var(--dark);
+}
+.email-setting-checkboxes .checkbox-texts p {
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: normal;
+    color: var(--ash);
+}
+.note-text span {
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    color: var(--dark);
+}
+.note-text {
+    padding: 30px 0px;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: normal;
+    color: var(--ash);
+}
 
 /* * {
     outline: red solid 1px;

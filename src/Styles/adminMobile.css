@@ -135,7 +135,24 @@
         padding-bottom: 80px;
     }
 
+    /* PROFILE SECTION */
+    .admin-personal-profile {
+        padding: 20px;
+    }
+    .admin-personal-profile .profile-section {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .profile-form {
+        grid-template-columns: 1fr;
+    }
+    .profile-form .profile-image img {
+        width: 100%;
+        height: 260px;
+    }
 
+
+    
     /* * {
         outline: red solid 1px ;
     } */

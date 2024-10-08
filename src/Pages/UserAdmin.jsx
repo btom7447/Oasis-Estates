@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import adminUserData from '../Datas/adminUserData.json'; 
 import AdminSidebar from "../Components/AdminSidebar";
 import AdminMobileNavbar from "../Components/AdminMobileNavbar";
@@ -11,7 +11,7 @@ const UserAdmin = () => {
         earning: 0
     });
 
-    const [notifications, setNotifications] = useState(5);
+    const [notifications, setNotifications] = useState(2);
     const [messages, setMessages] = useState(3);
 
     useEffect(() => {
@@ -36,12 +36,16 @@ const UserAdmin = () => {
                 <div className="admin-navbar">
                     <div className="nav-icons">
                         <div className="icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=11642&format=png&color=000000" alt="notification icon" />
-                            {notifications > 0 && <span className="badge">{notifications}</span>}
+                            <Link to="/user-admin/notification">
+                                <img src="https://img.icons8.com/?size=100&id=11642&format=png&color=000000" alt="notification icon" />
+                                {notifications > 0 && <span className="badge">{notifications}</span>}
+                            </Link>
                         </div>
                         <div className="icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=123847&format=png&color=000000" alt="message icon" />
-                            {messages > 0 && <span className="badge">{messages}</span>}
+                            <Link to="/user-admin/message">
+                                <img src="https://img.icons8.com/?size=100&id=123847&format=png&color=000000" alt="message icon" />
+                                {messages > 0 && <span className="badge">{messages}</span>}
+                            </Link>
                         </div>
                     </div>
                     <div className="earning-profile">
@@ -53,6 +57,9 @@ const UserAdmin = () => {
                     </div>
                 </div>
                 <Outlet />
+                <div className="copyright">
+                    <p>© 2024 Oasis Estates All right reserved</p>
+                </div>
             </div>
         </div>
     );

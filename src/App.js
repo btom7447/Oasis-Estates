@@ -1,10 +1,10 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './Styles/index.css';
 import './Styles/mobile.css';
 import './Styles/loader.css';
 import './Styles/admin.css';
 import './Styles/adminMobile.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './Components/ScrollToTop';
 import Loader from './Components/Loader';
 import usePageLoader from './Components/usePageLoader';
@@ -35,17 +35,24 @@ import AdminPropertyReview from './Pages/AdminPropertyReview';
 import AdminPersonalProfile from './Pages/AdminPersonalProfile';
 import AdminProfileSetting from './Pages/AdminProfileSetting';
 import AdminChangePassword from './Pages/AdminChangePassword';
-import Logoout from './Pages/Logout';
+import AdminNotification from './Pages/AdminNotification';
+
+// Private Route for protecting admin routes
+const PrivateRoute = ({ element: Component, ...rest }) => {
+  const isAuthenticated = localStorage.getItem('authenticated') === 'true';
+  return isAuthenticated ? <Component {...rest} /> : <Navigate to="/login" />;
+};
 
 const App = () => {
   return (
     <PropertyProvider>
-      <Router basename='/Oasis-Estates'>
+      <Router basename='/oasis-estates'>
         <ScrollToTop />
         <LoaderWrapper />
         <Routes>
-          {/* Main Domain Routes */}
+          {/* Main Domain Routes (Public) */}
           <Route path="/" element={<><Header /><Home /><Footer /></>} />
+          <Route path="/home" element={<Navigate to="/" />} />
           <Route path="/about" element={<><Header /><About /><Footer /></>} />
           <Route path="/listings" element={<><Header /><Listings /><Footer /></>} />
           <Route path="/property-details/:id" element={<><Header /><PropertyDetails /><Footer /></>} />
@@ -57,27 +64,27 @@ const App = () => {
           <Route path="/forgot-password" element={<><Header /><ForgotPassword /><Footer /></>} />
           <Route path="/terms-condition" element={<><Header /><TermsCondition /><Footer /></>} />
 
-          {/* Admin Domain Routes */}
-          <Route path="/user-admin/*" element={<UserAdmin />}>
-            <Route path="dashboard" element={<AdminDashboard />} />
-            <Route path="message" element={<AdminMessage />} />
-            <Route path="payments" element={<AdminPayments />} />
-            <Route path="earnings" element={<AdminEarnings />} />
-            <Route path="my-properties" element={<AdminProperties />} />
-            <Route path="create-listing" element={<AdminCreateListing />} /> 
-            <Route path="reviews" element={<AdminPropertyReview />} />
-            <Route path="personal-profile" element={<AdminPersonalProfile />} />
-            <Route path="profile-settings" element={<AdminProfileSetting />} />
-            <Route path="change-password" element={<AdminChangePassword />} />
-            <Route path="logout" element={<Logoout />} />
-          </Route>
+          <Route path="/user-admin" element={<PrivateRoute element={UserAdmin} />}>
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="message" element={<AdminMessage />} />
+          <Route path="notification" element={<AdminNotification />} />
+          <Route path="payments" element={<AdminPayments />} />
+          <Route path="earnings" element={<AdminEarnings />} />
+          <Route path="my-properties" element={<AdminProperties />} />
+          <Route path="create-listing" element={<AdminCreateListing />} />
+          <Route path="reviews" element={<AdminPropertyReview />} />
+          <Route path="personal-profile" element={<AdminPersonalProfile />} />
+          <Route path="profile-settings" element={<AdminProfileSetting />} />
+          <Route path="change-password" element={<AdminChangePassword />} />
+        </Route>
         </Routes>
       </Router>
       <ToastContainer position='top-right' autoClose={3000} />
     </PropertyProvider>
   );
-}
+};
 
+// Loader Wrapper
 const LoaderWrapper = () => {
   const loading = usePageLoader();
   return loading ? <Loader /> : null;

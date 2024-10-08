@@ -63,11 +63,24 @@ const ListingForm = () => {
     }, []);
 
     const handleChange = (e) => {
-        const { name, value, type, checked } = e.target;
+        const { name, value } = e.target;
+    
+        // Format the price input to include commas
+        const formattedValue = name === "price" ? formatPrice(value) : value;
+    
         setFormData({
             ...formData,
-            [name]: type === "checkbox" ? checked : value
+            [name]: formattedValue
         });
+    };
+    
+    // Function to format the price with commas for thousands
+    const formatPrice = (value) => {
+        // Remove any non-numeric characters except for the decimal point
+        const numericValue = value.replace(/[^0-9.]/g, '');
+    
+        // Add commas for thousands
+        return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
 
     const handleSelectChange = (selectedOption, { name }) => {
@@ -192,7 +205,7 @@ const ListingForm = () => {
             <label>
                 Price:
                 <input
-                    type="number"
+                    type="text"
                     name="price"
                     value={formData.price}
                     onChange={handleChange}

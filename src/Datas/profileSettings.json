@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "checked": true,
+        "title": "Rating reminder", 
+        "text": "send an email reminding me to rate a property a week after purchase/rent"
+    },
+    {
+        "id": "2",
+        "checked": false,
+        "title": "Property update notifications", 
+        "text": "Send an email when a property I've purhcased/rented is updated"
+    },
+    {
+        "id": "3",
+        "checked": true,
+        "title": "Property comment notification", 
+        "text": "Send me an email when someone comments on my property"
+    },
+    {
+        "id": "4",
+        "checked": true,
+        "title": "property comment notifications", 
+        "text": "Send me an email when someone comments on one of my properties"
+    },
+    {
+        "id": "5",
+        "checked": false,
+        "title": "Property verification notifications", 
+        "text": "Send me an email when my listed property gets verified"
+    },
+    {
+        "id": "6",
+        "checked": false,
+        "title": "Buyer review notifications", 
+        "text": "send an email when my property is purhcased"
+    },
+    {
+        "id": "7",
+        "checked": true,
+        "title": "Monthly summary emails", 
+        "text": "Send me a monthly summary of all my verified properties statistics"
+    }
+]

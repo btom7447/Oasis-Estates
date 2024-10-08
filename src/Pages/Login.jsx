@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BreadCrumb from "../Components/BreadCrumb";
@@ -10,12 +11,24 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Simulate a successful login
-        toast.success("Login successful");
+        // Default credentials
+        const defaultUsername = 'admin@gmail.com';
+        const defaultPassword = '123';
+
+        if (email === defaultUsername && password === defaultPassword) {
+            // Set authenticated flag in localStorage
+            localStorage.setItem('authenticated', 'true');
+            toast.success("Login successful");
+            // Redirect to admin dashboard
+            navigate('/user-admin/dashboard');
+        } else {
+            toast.error("Invalid credentials");
+        }
     };
 
     const togglePasswordVisibility = () => {

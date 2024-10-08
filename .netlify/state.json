@@ -1,0 +1,14 @@
+{
+	"geolocation": {
+		"data": {
+			"country": {
+				"code": "NG",
+				"name": "Nigeria"
+			},
+			"timezone": "Africa/Lagos",
+			"latitude": 10,
+			"longitude": 8
+		},
+		"timestamp": 1726052673907
+	}
+}

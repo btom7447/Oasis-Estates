@@ -5,12 +5,7 @@ import Select from "react-select";
 const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
     const [updatedProperty, setUpdatedProperty] = useState({ ...property });
 
-    useEffect(() => {
-        if (property) {
-            setUpdatedProperty({ ...property });
-        }
-    }, [property]);
-
+    // Define the options
     const propertyTypeOptions = [
         { value: "apartment", label: "Apartment" },
         { value: "office", label: "Office" },
@@ -46,14 +41,26 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
         { value: "balcony", label: "Balcony" }
     ];
 
+    // Format number with commas
+    const formatPrice = (value) => {
+        if (!value) return value;
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+
+    // Handle changes for text inputs
     const handleChange = (e) => {
         const { name, value } = e.target;
+        
+        // If price input, format it
+        const formattedValue = name === "price" ? formatPrice(value.replace(/,/g, '')) : value;
+
         setUpdatedProperty(prevState => ({
             ...prevState,
-            [name]: value
+            [name]: formattedValue
         }));
     };
 
+    // Handle changes for Select inputs
     const handleSelectChange = (selectedOption, { name }) => {
         setUpdatedProperty(prevState => ({
             ...prevState,
@@ -61,6 +68,7 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
         }));
     };
 
+    // Handle changes for multi-select highlights
     const handleHighlightChange = (selectedOptions) => {
         setUpdatedProperty(prevState => ({
             ...prevState,
@@ -68,8 +76,26 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
         }));
     };
 
+    useEffect(() => {
+        if (property) {
+            setUpdatedProperty({
+                ...property,
+                // Convert features from array to objects for Select
+                features: highlightsOptions.filter(option => property.features?.includes(option.value)),
+                // Format price with commas initially
+                price: formatPrice(property.price)
+            });
+        }
+    }, [property, highlightsOptions]);
+    
+
     const handleSubmit = () => {
-        onConfirm(updatedProperty);
+        // Convert price back to number before submitting
+        const formattedProperty = {
+            ...updatedProperty,
+            price: parseInt(updatedProperty.price.replace(/,/g, ''), 10)
+        };
+        onConfirm(formattedProperty);
     };
 
     return (
@@ -134,7 +160,7 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
                     <label>
                         Price:
                         <input
-                            type="number"
+                            type="text"
                             name="price"
                             value={updatedProperty.price || ""}
                             onChange={handleChange}
@@ -163,7 +189,40 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
                         />
                     </label>
 
-                    {/* PROPERTY HIGHLIGHTS SELECT INPUT */}
+                    {/* PROPERTY AREA SIZE INPUT */}
+                    <label>
+                        Area (Sqft):
+                        <input
+                            type="number"
+                            name="size"
+                            value={updatedProperty.size || ""}
+                            onChange={handleChange}
+                        />
+                    </label>
+
+                    {/* PROPERTY BEDROOMS INPUT */}
+                    <label>
+                        Bedrooms:
+                        <input
+                            type="number"
+                            name="bedrooms"
+                            value={updatedProperty.bedrooms || ""}
+                            onChange={handleChange}
+                        />
+                    </label>
+
+                    {/* PROPERTY BATHROOMS INPUT */}
+                    <label>
+                        Bathrooms:
+                        <input
+                            type="number"
+                            name="bathrooms"
+                            value={updatedProperty.bathrooms || ""}
+                            onChange={handleChange}
+                        />
+                    </label>
+
+                    {/* PROPERTY HIGHLIGHTS INPUT SELECT */}
                     <label>
                         Highlights:
                         <Select
@@ -172,13 +231,16 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
                             name="features"
                             options={highlightsOptions}
                             isMulti
-                            value={highlightsOptions.filter(option => updatedProperty.features.includes(option.value))}
+                            value={updatedProperty.features.map(feature => highlightsOptions.find(option => option.value === feature))}
                             onChange={handleHighlightChange}
                         />
                     </label>
 
-                    {/* SUBMIT BUTTON */}
-                    <button onClick={handleSubmit}>Save Changes</button>
+                    {/* MODAL BUTTONS */}
+                    <div className="modal-buttons">
+                        <button onClick={handleSubmit}>Save Changes</button>
+                        <button onClick={onRequestClose}>Cancel</button>
+                    </div>
                 </div>
             </div>
         </ReactModal>

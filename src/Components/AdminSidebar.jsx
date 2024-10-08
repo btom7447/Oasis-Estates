@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightArrowLeft, faChartLine, faCreditCardAlt, faDollar, faEye, faHouse, faMessage, faPlusSquare, faStar, faUserAlt, faUserGear } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightArrowLeft, faBell, faChartLine, faCreditCardAlt, faDollar, faEye, faHouse, faMessage, faPlusSquare, faStar, faUserAlt, faUserGear } from '@fortawesome/free-solid-svg-icons';
 
 const AdminSidebar = () => {
     const location = useLocation();
@@ -9,7 +9,7 @@ const AdminSidebar = () => {
     return (
         <div className="admin-sidebar">
             <div className="logo">
-                <Link to="/user-admin">
+                <Link to="/">
                     <img src="https://unicoderbd.com/template/uniland/fullwidth/assets/images/logo/logo-white.png" alt="website logo" />
                 </Link>
             </div>
@@ -22,6 +22,10 @@ const AdminSidebar = () => {
                 <li className={location.pathname.includes('message') ? 'active' : ''}>
                     <FontAwesomeIcon icon={faMessage} />
                     <Link to="message">Message</Link>
+                </li>
+                <li className={location.pathname.includes('notification') ? 'active' : ''}>
+                    <FontAwesomeIcon icon={faBell} />
+                    <Link to="notification">Notifications</Link>
                 </li>
                 <li>Transactions</li>
                 <li className={location.pathname.includes('payments') ? 'active' : ''}>
@@ -58,9 +62,16 @@ const AdminSidebar = () => {
                     <FontAwesomeIcon icon={faEye} />
                     <Link to="change-password">Change Password</Link>
                 </li>
-                <li className={location.pathname.includes('logout') ? 'active' : ''}>
+                <li>
                     <FontAwesomeIcon icon={faArrowRightArrowLeft} />
-                    <Link to="logout">Logout</Link>
+                    <button 
+                        onClick={() => {
+                            localStorage.setItem('authenticated', 'false');
+                            window.location.href = '/'; 
+                        }}
+                    >
+                        Logout
+                    </button>
                 </li>
             </ul>
         </div>
