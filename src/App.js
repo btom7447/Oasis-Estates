@@ -46,13 +46,13 @@ const PrivateRoute = ({ element: Component, ...rest }) => {
 const App = () => {
   return (
     <PropertyProvider>
-      <Router basename='/oasis-estates'>
+      <Router>
         <ScrollToTop />
         <LoaderWrapper />
         <Routes>
-          {/* Main Domain Routes (Public) */}
-          <Route path="/" element={<><Header /><Home /><Footer /></>} />
-          <Route path="/home" element={<Navigate to="/" />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          {/* Public Routes */}
+          <Route path="/home" element={<><Header /><Home /><Footer /></>} />
           <Route path="/about" element={<><Header /><About /><Footer /></>} />
           <Route path="/listings" element={<><Header /><Listings /><Footer /></>} />
           <Route path="/property-details/:id" element={<><Header /><PropertyDetails /><Footer /></>} />
@@ -64,19 +64,23 @@ const App = () => {
           <Route path="/forgot-password" element={<><Header /><ForgotPassword /><Footer /></>} />
           <Route path="/terms-condition" element={<><Header /><TermsCondition /><Footer /></>} />
 
+          {/* Protected Admin Routes */}
           <Route path="/user-admin" element={<PrivateRoute element={UserAdmin} />}>
-          <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="message" element={<AdminMessage />} />
-          <Route path="notification" element={<AdminNotification />} />
-          <Route path="payments" element={<AdminPayments />} />
-          <Route path="earnings" element={<AdminEarnings />} />
-          <Route path="my-properties" element={<AdminProperties />} />
-          <Route path="create-listing" element={<AdminCreateListing />} />
-          <Route path="reviews" element={<AdminPropertyReview />} />
-          <Route path="personal-profile" element={<AdminPersonalProfile />} />
-          <Route path="profile-settings" element={<AdminProfileSetting />} />
-          <Route path="change-password" element={<AdminChangePassword />} />
-        </Route>
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="message" element={<AdminMessage />} />
+            <Route path="notification" element={<AdminNotification />} />
+            <Route path="payments" element={<AdminPayments />} />
+            <Route path="earnings" element={<AdminEarnings />} />
+            <Route path="my-properties" element={<AdminProperties />} />
+            <Route path="create-listing" element={<AdminCreateListing />} />
+            <Route path="reviews" element={<AdminPropertyReview />} />
+            <Route path="personal-profile" element={<AdminPersonalProfile />} />
+            <Route path="profile-settings" element={<AdminProfileSetting />} />
+            <Route path="change-password" element={<AdminChangePassword />} />
+          </Route>
+
+          {/* Fallback Route */}
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </Router>
       <ToastContainer position='top-right' autoClose={3000} />
