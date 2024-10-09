@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import ReactModal from "react-modal";
 import Select from "react-select";
 
@@ -21,7 +21,7 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
         { value: "forSale", label: "For Sale" }
     ];
 
-    const highlightsOptions = [
+    const highlightsOptions = useMemo(() => [
         { value: "airConditioning", label: "Air Conditioning" },
         { value: "security", label: "24/7 Security" },
         { value: "waterHeater", label: "Water Heater" },
@@ -39,7 +39,7 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
         { value: "cctv", label: "CCTV" },
         { value: "garden", label: "Garden" },
         { value: "balcony", label: "Balcony" }
-    ];
+    ], []);
 
     // Format number with commas
     const formatPrice = (value) => {
@@ -80,13 +80,11 @@ const EditPropertyModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
         if (property) {
             setUpdatedProperty({
                 ...property,
-                // Convert features from array to objects for Select
                 features: highlightsOptions.filter(option => property.features?.includes(option.value)),
-                // Format price with commas initially
                 price: formatPrice(property.price)
             });
         }
-    }, [property, highlightsOptions]);
+    }, [property]); // Removed highlightsOptions from dependencies    
     
 
     const handleSubmit = () => {
