@@ -16,7 +16,7 @@
   --ash: #6D7175;
   --primary-orange: #AA8453;
   --secondary-orange: #52412e;
-  --secondary-background: rgba(170, 132, 83, 0.1);
+  --secondary-background: #aa84531a;
   --dark: #12171f;
 }
 
@@ -1187,6 +1187,43 @@ footer .footer-bottom .footer-column button:hover {
   background-color: var(--primary-orange);
   color: var(--white);
 }
+.property-card .favorite-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+.favorite-container .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.favorite-container  .container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.favorite-container  .container svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s;
+  fill: #3534341b;
+  stroke: var(--white);
+}
+.favorite-container  .container svg:hover {
+  transform: scale(1.1);
+}
+.favorite-container  .container input:checked ~ svg {
+  fill: var(--primary-orange);
+  stroke: none;
+}
+
 .property-card .property-carousel {
   position: relative;
   width: 100%;

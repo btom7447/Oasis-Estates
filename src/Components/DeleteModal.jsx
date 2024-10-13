@@ -14,7 +14,7 @@ const DeleteModal = ({ isOpen, onRequestClose, onConfirm, property }) => {
             <p>Are you sure you want to delete the property "{property.name}"?</p>
             <div className="modal-buttons">
                 <button onClick={onConfirm}>Yes, Delete</button>
-                <button onClick={onRequestClose}>Cancel</button>
+                <button onClick={onRequestClose}>No</button>
             </div>
         </ReactModal>
     );

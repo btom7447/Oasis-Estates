@@ -36,6 +36,7 @@ import AdminPersonalProfile from './Pages/AdminPersonalProfile';
 import AdminProfileSetting from './Pages/AdminProfileSetting';
 import AdminChangePassword from './Pages/AdminChangePassword';
 import AdminNotification from './Pages/AdminNotification';
+import AdminFavorites from './Pages/AdminFavorites';
 
 // Private Route for protecting admin routes
 const PrivateRoute = ({ element: Component, ...rest }) => {
@@ -71,6 +72,7 @@ const App = () => {
             <Route path="notification" element={<AdminNotification />} />
             <Route path="payments" element={<AdminPayments />} />
             <Route path="earnings" element={<AdminEarnings />} />
+            <Route path="my-favorites" element={<AdminFavorites />} />
             <Route path="my-properties" element={<AdminProperties />} />
             <Route path="create-listing" element={<AdminCreateListing />} />
             <Route path="reviews" element={<AdminPropertyReview />} />

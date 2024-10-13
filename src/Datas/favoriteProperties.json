@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Cozy Student Lodge",
+        "address": "University of Lagos, Akoka",
+        "location": "Lagos",
+        "status": "Rent",
+        "featured": "no",
+        "type": "student lodge",
+        "price": 150000,
+        "installment": "yes",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "size": 300,
+        "image": ["https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg", "https://img.freepik.com/free-photo/3d-rendering-luxury-bedroom-suite-hotel-with-tv-cabinet-wardrobe_105762-2286.jpg", "https://img.freepik.com/free-photo/high-angle-shot-bedroom-with-interior-stuff-beige-tones_181624-33128.jpg"],
+        "description": ["Affordable and cozy lodge for students.", "Close to the university with easy access to amenities."],
+        "date": "2024-03-03",
+        "features": ["Wi-Fi", "Study Area", "Laundry Service"]
+    },
+    {
+        "id": "13",
+        "name": "Luxury Duplex",
+        "address": "Gwarinpa, Abuja",
+        "location": "Abuja",
+        "status": "Sale",
+        "featured": "yes",
+        "type": "apartment",
+        "price": 20000000,
+        "installment": "no",
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "size": 3000,
+        "image": ["https://img.freepik.com/free-photo/beautiful-large-apartmentroom-interior-with-stylish-living-room_482257-4922.jpg?semt=ais_user", "https://img.freepik.com/free-photo/online-school-equipment-home_23-2149041149.jpg?semt=ais_user", "https://img.freepik.com/free-photo/desktop-pc-monitor-office-with-trading-indexes-showing-latest-prices_482257-83060.jpg?semt=ais_user"],
+        "description": ["Spacious and luxurious duplex in a serene neighborhood.", "Perfect for large families."],
+        "realtorNumber": "+234 5677 8910", 
+        "realtor": "David Idowu",
+        "realtorImage": "https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064826.jpg?ga=GA1.1.608707904.1722074301&semt=sph",
+        "date": "2024-01-01",
+        "features": ["Swimming Pool", "Garden", "Security"]
+    }
+]

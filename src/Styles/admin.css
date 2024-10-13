@@ -984,6 +984,7 @@ a {
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
+    text-align: center;
 }
 .message-box .chats-container li {
     width: 100%;

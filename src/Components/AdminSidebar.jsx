@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightArrowLeft, faBell, faChartLine, faCreditCardAlt, faDollar, faEye, faHouse, faMessage, faPlusSquare, faStar, faUserAlt, faUserGear } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightArrowLeft, faBell, faChartLine, faCreditCardAlt, faDollar, faEye, faHeart, faHouse, faMessage, faPlusSquare, faStar, faUserAlt, faUserGear } from '@fortawesome/free-solid-svg-icons';
 
 const AdminSidebar = () => {
     const location = useLocation();
@@ -28,18 +28,22 @@ const AdminSidebar = () => {
                     <Link to="notification">Notifications</Link>
                 </li>
                 <li>Transactions</li>
-                <li className={location.pathname.includes('payments') ? 'active' : ''}>
-                    <FontAwesomeIcon icon={faCreditCardAlt} />
-                    <Link to="payments">Payments</Link>
-                </li>
                 <li className={location.pathname.includes('earnings') ? 'active' : ''}>
                     <FontAwesomeIcon icon={faDollar} />
                     <Link to="earnings">Earnings</Link>
+                </li>
+                <li className={location.pathname.includes('payments') ? 'active' : ''}>
+                    <FontAwesomeIcon icon={faCreditCardAlt} />
+                    <Link to="payments">Payments</Link>
                 </li>
                 <li>Manage Listing</li>
                 <li className={location.pathname.includes('create-listing') ? 'active' : ''}>
                     <FontAwesomeIcon icon={faPlusSquare} />
                     <Link to="create-listing">Create Listing</Link>
+                </li>
+                <li className={location.pathname.includes('my-favorites') ? 'active' : ''}>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <Link to="my-favorites">My Favorites</Link>
                 </li>
                 <li className={location.pathname.includes('my-properties') ? 'active' : ''}>
                     <FontAwesomeIcon icon={faHouse} />
