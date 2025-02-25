@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Oasis Estates
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌍 Modern Real Estate Platform
+**Oasis Estates** is a modern real estate website built with **React**, designed to showcase Nigerian properties for **sale** and **rent**. The platform offers advanced property search and filtering features to help users find their ideal home or investment property.
 
-## Available Scripts
+## ✨ Features
+- 🏠 **Property Listings** – Browse available properties for sale or rent.
+- 🔍 **Advanced Search & Filters** – Find properties by **location, price, property type, name, amenities, and more**.
+- 📱 **Responsive Design** – Optimized for seamless viewing on desktops, tablets, and mobile devices.
+- 🔗 **API Integration** – Fetch real-time property data and user interactions.
+- 📊 **Interactive Charts & Statistics** – Visual representation of property market trends.
+- 📄 **PDF Export** – Save property details as PDFs for offline access.
+- 🔐 **Secure Authentication** – Uses JWT for user authentication and **bcryptjs** for password encryption.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Tech Stack
+### **Frontend:**
+- **React 18** – Modern, component-based UI framework
+- **React Router** – Seamless navigation between pages
+- **React Select** – User-friendly dropdowns
+- **React Spring** – Smooth animations
+- **React Toastify** – Elegant notifications
+- **Recharts & Chart.js** – Interactive data visualization
+- **Axios** – API request handling
+- **Odometer.js** – Animated numerical counters
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Backend & Authentication:**
+- **Express.js** – Fast and lightweight backend framework
+- **Mongoose** – MongoDB object modeling for Node.js
+- **JWT (jsonwebtoken)** – Secure user authentication
+- **Bcrypt.js** – Password hashing for security
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Other Dependencies:**
+- **JS-PDF** – PDF generation for property details
+- **Splide.js** – Modern carousel slider for property images
+- **Google reCAPTCHA** – Protects against spam & abuse
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Installation & Setup
+### Prerequisites:
+Ensure you have **Node.js** and **npm** installed on your machine.
 
-### `npm run build`
+### Clone the Repository:
+```sh
+ git clone https://github.com/your-username/oasis-estates.git
+ cd oasis-estates
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Install Dependencies:
+```sh
+ npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Run the Development Server:
+```sh
+ npm start
+```
+This starts the app at `http://localhost:3000/`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📦 Deployment
+### **Deploy to GitHub Pages**
+Run the following commands:
+```sh
+npm run predeploy
+npm run deploy
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🤝 Contribution
+We welcome contributions! Feel free to fork the repository and submit a pull request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📜 License
+This project is licensed under the **MIT License**.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📧 Contact
+For inquiries or collaborations, please reach out at: **tombenjamin7447@gmail.com**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
